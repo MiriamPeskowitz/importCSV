@@ -1,4 +1,4 @@
-class Store < ApplicationRecord
+class Store < ActiveRecord::Base
   require 'csv'
 
   def self.import(file)
@@ -7,3 +7,6 @@ class Store < ApplicationRecord
   	end 
   end
 end
+
+
+# headers: :first_row   bom|utf-8    encoding: 'iso-8859-1:utf-8'
